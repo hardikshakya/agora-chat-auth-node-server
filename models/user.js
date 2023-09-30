@@ -16,6 +16,8 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    // WARNING: Storing passwords in plain text is not secure.
+    // Consider using a library like bcrypt to hash passwords before storing them.
   },
   activated: {
     type: Boolean,
